@@ -1,0 +1,13 @@
+.myclass {
+    width: 100%;
+    position: fixed;
+    height: 100px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: chartreuse;
+}
