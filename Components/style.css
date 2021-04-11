@@ -52,6 +52,9 @@ p {
     transform: translateY(50%);
 }
 
+.css-doodle {
+z-index = -1;
+}
 .card-img-top {
     border-radius: 10px;
 }
