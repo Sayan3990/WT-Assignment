@@ -6,10 +6,24 @@
     <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./Components/style.css">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
 <body>
+    <css-doodle>
+  :doodle {
+    @grid: 20 / 100vmax;
+    background: #0a0c27;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  :after {
+    content: \@hex.@r(0x2500, 0x257f);
+    color: hsla(@r360, 70%, 70%, @r.9);
+    font-size: 8vmin;
+  }
+</css-doodle>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <ul class="nav" style="font-weight: bold;">
                 <li class="nav-item">
