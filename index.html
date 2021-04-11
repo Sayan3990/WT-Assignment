@@ -6,28 +6,58 @@
     <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./Components/style.css">
-    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
     <title>Home</title>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <ul class="nav" style="font-weight: bold;">
-                <li class="nav-item">
-                    <a class="nav-link border border-warning text-warning" href="index.html" target="_top">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Interface.html" target="_top">Interface</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About.html" target="_top">About</a>
-                </li>
-            </ul>
-            <a href="https://www.google.com/doodles" class="classgreet"><p class="font-weight-bold" id="greet"></p></p></a>
-        </nav>
+    <div>
+        <css-doodle grid="5" class="doodle">
+            :doodle {
+                @grid: 10 / 100vmax;
+            }
+            background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+            opacity: @r(.9);
+            clip-path: polygon(
+                @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+            );
+            
+            animation: test infinite @r(40s, 70s) linear;
+            
+            @keyframes test {
+                0% {
+                transform: translate3d(0, 0, 0);
+                }
+                50% {
+                transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+                }
+                100% {
+                transform: translate3d(0, 0, 0);
+                }
+            }
+        </css-doodle>
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="progressbar"></div>
+                <ul class="nav" style="font-weight: bold;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html" target="_top">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>      
+    </div>
+    <p id="greet"></p>
+        
         <div class="myclass">
             <div class="container-fluid">
                 <div class="row">
@@ -54,9 +84,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="row">
                     <div class="col">
                         <div class="card">
                             <img class="card-img-top" src="./Components/interface-in-java.jpg" alt="Interface">
@@ -66,18 +93,6 @@
                                 An interface in java is a blueprint of a class. It has static constants and abstract methods. The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface.
                               </p>
                               <a href="./Interface.html" class="btn btn-primary">Interface >></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img class="card-img-top" src="./Components/about.jpg" alt="About">
-                            <div class="card-body">
-                              <h4 class="card-title">About us</h4>
-                              <p class="card-text">
-                                This is our Web technology Sessional Project. Here we have discussed about the abstract classes and concept of interfaces in Java.
-                              </p>
-                              <a href="./About.html" class="btn btn-primary">About >></a>
                             </div>
                         </div>
                     </div>
@@ -101,5 +116,16 @@
       
           </script>
 </body>
-
+<footer>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="card-title"><a href="./About.html" class="btn btn-dark " style="background-color: black;"><b> Go to about </b></a></h4>
+            <p class="card-text">
+            This is our Web technology Sessional Project from WT Group-8. Here we have discussed about the abstract classes and concept of interfaces in Java.
+            </p>
+        </div>
+    </div>
+</footer>
+    
+</div>
 </html>
