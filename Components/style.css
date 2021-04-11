@@ -97,7 +97,7 @@ p {
 }
 
 .card-img-top {
-    height: 120px;
+    height: 125px;
     border-radius: 10px;
 }
 
@@ -111,6 +111,7 @@ footer {
     bottom: 0;
     width: 100%;
     position: fixed;
+    visibility: hidden;
 }
 
 footer .card {
@@ -142,5 +143,10 @@ footer .card:hover {
     .card-body a{
         transform: translateY(0);
     }
+    
+
+footer {
+    visibility: visible;
+}
 
 }
