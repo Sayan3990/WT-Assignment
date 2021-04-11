@@ -128,6 +128,16 @@ footer .card:hover {
     opacity: 1;
 }
 
+#progressbar {
+   position: fixed;
+   z-index: 100;
+   top: 0;
+   background-color:#ff00ff;
+   width: 0;
+   height: 2px;
+   box-shadow: 0 2px 4px 0 rgba(123, 50, 168, 0.6), 0 4px 6px 0 rgba(123, 50, 168, 0.2);
+}
+
 @media only screen and (min-width: 950px) {
     .card {
         height: 400px;

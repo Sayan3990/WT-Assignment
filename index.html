@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./Components/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 <body>
     <div>
+        <div id="progressbar" border ></div>
         <css-doodle grid="5" class="doodle">
             :doodle {
                 @grid: 10 / 100vmax;
@@ -38,7 +40,6 @@
         </css-doodle>
         <div>
             <nav class="navbar navbar-expand-lg ">
-                <div class="progressbar"></div>
                 <ul class="nav" style="font-weight: bold;">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html" target="_top">Home</a>
@@ -99,22 +100,21 @@
                 </div>
             </div>
         </div>
-        
         <script>
             const currDate = new Date();
             const hrs = currDate.getHours();
             let greet;
-    
-            if (hrs < 12)
+                if (hrs < 12)
                 greet = 'Morning';
-            else if (hrs >= 12 && hrs < 17)
-                greet = 'Afternoon';
-            else if (hrs >= 17 && hrs <= 24)
-                greet = 'Evening';
-            
-            document.getElementById('greet').innerHTML = 'Good ' + greet + '!';
-      
-          </script>
+                else if (hrs >= 12 && hrs < 17)
+                    greet = 'Afternoon';
+                else if (hrs >= 17 && hrs <= 24)
+                    greet = 'Evening';
+                
+                document.getElementById('greet').innerHTML = 'Good ' + greet + '!';    
+        </script>
+        <script src="./Components/main.js"></script>
+
 </body>
 <footer>
     <div class="card bg-dark">
