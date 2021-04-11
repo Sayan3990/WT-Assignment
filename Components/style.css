@@ -25,9 +25,11 @@ p {
     border-color: #3366ff;
     border-radius: 10px;
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .classgreet {
+    visibility: hidden;
     position: absolute;
     right: 10px;
     color: white;
@@ -37,10 +39,17 @@ p {
 }
 .card {
     background-color: #e6ffff;
+    height: auto;
+    width: auto;
 }
 
 .card:hover {
     opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-body a {
+    transform: translateY(50%);
 }
 
 .card-img-top {
@@ -52,4 +61,28 @@ p {
     25%  {color: chartreuse;}
     50%  {color: skyblue;}
     100% {color: yellow;}
+}
+
+@media only screen and (min-width: 950px) {
+    .card {
+        background-color: #e6ffff;
+        height: 420px;
+        width: auto;
+    }
+
+    .myclass {
+        padding: 0 10%;
+        width: 100%;
+    }
+
+    .card-body a{
+        transform: translateY(0);
+    }
+
+    .classgreet {
+        visibility: visible;
+        position: absolute;
+        right: 10px;
+        color: white;
+    }
 }
