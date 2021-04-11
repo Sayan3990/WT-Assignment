@@ -1,7 +1,7 @@
-.myclass {
+.navbar {
     width: 100%;
     position: fixed;
-    height: 100px;
+    z-index: 10;
 }
 
 .nav-link {
@@ -10,4 +10,46 @@
 
 .nav-link:hover {
     color: chartreuse;
+}
+
+p {
+    text-indent: 30px;
+}
+
+.container-fluid {
+    padding-top: 50px;
+}
+
+.container-fluid div {
+    border-width: 3px;
+    border-color: #3366ff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.classgreet {
+    position: absolute;
+    right: 10px;
+    color: white;
+    animation-name: ani1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.card {
+    background-color: #e6ffff;
+}
+
+.card:hover {
+    opacity: 0.9;
+}
+
+.card-img-top {
+    border-radius: 10px;
+}
+
+@keyframes ani1 {
+    0%   {color: darkorange;}
+    25%  {color: chartreuse;}
+    50%  {color: skyblue;}
+    100% {color: yellow;}
 }

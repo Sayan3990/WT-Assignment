@@ -25,7 +25,77 @@
                     <a class="nav-link" href="About.html" target="_top">About</a>
                 </li>
             </ul>
-        </nav> 
+            <a href="https://www.google.com/doodles" class="classgreet"><p class="font-weight-bold" id="greet"></p></p></a>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <img class="card-img-top" src="./Components/java.png" alt="Java">
+                        <div class="card-body">
+                          <h4 class="card-title">Java</h4>
+                          <p class="card-text">Java is a programming language created by James Gosling from Sun Microsystems (Sun) in 1991. The target of Java is to write a program once and then run this program on multiple operating systems. Java is defined by a specification and consists of a programming language, a compiler, core libraries and a runtime.
+                          </p>
+                          <a href="https://beginnersbook.com/2013/05/java-introduction/" class="btn btn-primary">Java >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <img class="card-img-top" src="./Components/abstract-class-in-java.jpg" alt="Abstraction">
+                        <div class="card-body">
+                          <h4 class="card-title">Abstraction</h4>
+                          <p class="card-text">
+                            Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces. Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+                          </p>
+                          <a href="./Abstraction.html" class="btn btn-primary">Abstraction >></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <img class="card-img-top" src="./Components/interface-in-java.jpg" alt="Interface">
+                        <div class="card-body">
+                          <h4 class="card-title">Interface</h4>
+                          <p class="card-text">
+                            An interface in java is a blueprint of a class. It has static constants and abstract methods. The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not the method body. It is used to achieve abstraction and multiple inheritance in Java.
+                          </p>
+                          <a href="./Interface.html" class="btn btn-primary">Interface >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <img class="card-img-top" src="./Components/about.jpg" alt="About">
+                        <div class="card-body">
+                          <h4 class="card-title">About us</h4>
+                          <p class="card-text">
+                            This is our Web technology Sessional Project. Here we have discussed about the abstract classes and concept of interfaces in Java.
+                          </p>
+                          <a href="./About.html" class="btn btn-primary">About >></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const currDate = new Date();
+            const hrs = currDate.getHours();
+            let greet;
+    
+            if (hrs < 12)
+                greet = 'Morning';
+            else if (hrs >= 12 && hrs < 17)
+                greet = 'Afternoon';
+            else if (hrs >= 17 && hrs <= 24)
+                greet = 'Evening';
+            
+            document.getElementById('greet').innerHTML = 'Good ' + greet + '!';
+      
+          </script>
 </body>
 
 </html>
