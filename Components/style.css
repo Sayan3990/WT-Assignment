@@ -72,6 +72,7 @@ p {
     background-color:rgb(125, 253, 6);
     border-radius: 10px;
     padding: 5px 10px;
+    text-align: center;
 }
 
 @keyframes greetani {
@@ -109,7 +110,7 @@ p {
 footer {
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 footer .card {
