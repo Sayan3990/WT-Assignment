@@ -35,6 +35,7 @@
 
 p {
     text-indent: 30px;
+    font-weight: 500;
 }
 
 .container-fluid {
@@ -71,8 +72,7 @@ p {
     animation-duration: 3s;
     visibility: hidden;
     font-size: 60px;
-    color: rgb(98, 0, 255);
-    background-color: #39ff14;
+    color: #e48900;
     border-radius: 13px;
     padding: 5px 10px;
     font-weight: bold;
@@ -108,6 +108,7 @@ p {
     height: 100px;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-weight: 500;
 }
 
 footer {
@@ -117,7 +118,6 @@ footer {
     animation-name: footani;
     animation-duration: 2s;
     animation-iteration-count: 1;
-    /* position: absolute; */
 }
 
 @keyframes footani {
