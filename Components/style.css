@@ -38,13 +38,13 @@ p {
 }
 
 .container-fluid {
-    padding-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 
 .container-fluid div {
     border-radius: 10px;
     padding: 20px;
-    padding-bottom: 0;
 }
 
 .card {
@@ -100,7 +100,7 @@ p {
 }
 
 .card-img-top {
-    height: 125px;
+    height: 110px;
     border-radius: 10px;
 }
 
@@ -111,16 +111,28 @@ p {
 }
 
 footer {
-    visibility: hidden;
-    bottom: 0;
+    opacity: 1;
+    visibility: visible;
     width: 100%;
-    position: absolute;
+    animation-name: footani;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    /* position: absolute; */
+}
+
+@keyframes footani {
+    0%   {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.container {
+    padding-top: 100px;
 }
 
 footer .card {
     border-radius: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
     color: white;
     animation: none;
 }
@@ -139,10 +151,42 @@ footer .card:hover {
    box-shadow: 0 2px 4px 0 rgba(123, 50, 168, 0.6), 0 4px 6px 0 rgba(123, 50, 168, 0.2);
 }
 
+#text {
+    background-color: white;
+}
+
+#text1 {
+    text-decoration: underline;
+    background-color:white;
+}
+
+.p-2 img {
+    height: auto;
+    width: 100%;
+}
+
 @media only screen and (min-width: 950px) {
+    .container-fluid {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 70px;
+    }
+    
+    @keyframes apprearcard {
+        0%   {height: 0;
+        opacity: 0.1;}
+        100% {height: 420px;
+            opacity: 1;}
+    }
+
     .card {
-        height: 400px;
+        height: 420px;
         width: auto;
+    }
+
+    .card-img-top {
+        height: 140px;
+        border-radius: 10px;
     }
 
     .navbar {
@@ -156,6 +200,21 @@ footer .card:hover {
 
     .card-body a{
         transform: translateY(0);
+    }
+
+    footer .card {
+        height: 120px;
+        color: white;
+        animation: none;
+    }
+
+    #text {
+        font-size: large;
+    }
+
+    .p-2 img {
+        height: 500px;
+        width: auto;
     }
 
     footer {
