@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title>Home || WT Group-8</title>
+    <title>Difference</title>
 </head>
 <body>
     <div>
@@ -58,7 +58,75 @@
                     </li>
                 </ul>
             </nav>
-        </div>      
+        </div>
+    </div>
+    <div class="container" style="top: 200px;">
+        <div class="d-flex flex-column">
+            <h1>Interface Vs Abstraction</h1>
+            <div class="p-2">
+                <h3 id="text1">Introduction:</h3>
+                <p id="text">
+                    An abstract class permits you to make functionality that subclasses can implement or override whereas an interface only permits you to state functionality but not to implement it. A class can extend only one abstract class while a class can implement multiple interfaces.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Difference between abstract class and interface:</h3>
+                <table class="table table-hover" style="background-color: aliceblue;">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Abstract classes</th>
+                        <th>Interfaces</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1) Abstract class can have abstract and non-abstract methods.</td>
+                        <td>1) An interface can have only abstract methods. Since Java 8, it can have default and static methods also.</td>
+                      </tr>
+                      <tr>
+                        <td>2) Abstract class doesn't support multiple inheritance.</td>
+                        <td>2) Interface supports multiple inheritance.</td>
+                      </tr>
+                      <tr>
+                        <td>3) Abstract class can have final, non-final, static and non-static variables.</td>
+                        <td>3) Interface has only static and final variables.</td>
+                      </tr>
+                      <tr>
+                        <td>4) Abstract class can provide the implementation of an interface.</td>
+                        <td>4) Interface can't provide the implementation of an abstract class.</td>
+                      </tr>
+                      <tr>
+                        <td>5) The abstract keyword is used to declare an abstract class.</td>
+                        <td>5) The interface keyword is used to declare the interface.</td>
+                      </tr>
+                      <tr>
+                        <td>6) An abstract class can extend another Java class and implement multiple Java interfaces.</td>
+                        <td>6) An interface can extend another Java interface only.</td>
+                      </tr>
+                      <tr>
+                        <td>7) An abstract class can be extended using the keyword “extends”.</td>
+                        <td>7) An interface class can be implemented using the keyword “implements”.</td>
+                      </tr>
+                      <tr>
+                        <td>8) A Java abstract class can have class members like private, protected, etc.</td>
+                        <td>8) Members of a Java interface are public by default.</td>
+                      </tr>
+                      <tr>
+                        <td>9) An abstract class has protected and public abstract methods.</td>
+                        <td>9) An interface can have only public abstract methods.</td>
+                      </tr>
+                      <tr>
+                        <td>10) It should be used when various implementations of the same kind share a common behavior.</td>
+                        <td>10) It is better to use interface when various implementations share only method signature. Polymorphic hierarchy of value types.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Example of abstract class and interface in Java:</h3>
+                <img src="" alt="Code">
+            </div>
+        </div>
     </div>
 </body>
 <footer>
@@ -74,3 +142,4 @@
     
 </div>
 </html>
+
