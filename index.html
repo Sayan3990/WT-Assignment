@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Components/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Home || WT Group-8</title>
+</head>
+<body>
+    <div>
+        <div id="progressbar" border ></div>
+        <css-doodle grid="5" class="doodle">
+            :doodle {
+                @grid: 10 / 100vmax;
+            }
+            background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+            opacity: @r(.9);
+            clip-path: polygon(
+                @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+            );
+            
+            animation: test infinite @r(40s, 70s) linear;
+            
+            @keyframes test {
+                0% {
+                transform: translate3d(0, 0, 0);
+                }
+                50% {
+                transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+                }
+                100% {
+                transform: translate3d(0, 0, 0);
+                }
+            }
+        </css-doodle>
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <ul class="nav" style="font-weight: bold;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="IVSA.html" target="_top">Difference</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html" target="_top">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>      
+    </div>
+        <p id="greet"></p>
+        
+        <div class="myclass">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img-top" src="./Components/java.png" alt="Java">
+                            <div class="card-body">
+                              <h4 class="card-title">Java</h4>
+                              <p class="card-text">Java is a programming language created by James Gosling from Sun Microsystems in 1991. The target of Java is to write a program once and then run this on multiple operating systems.
+                              </p>
+                              <a href="https://beginnersbook.com/2013/05/java-introduction/" class="btn btn-primary">Java >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img-top" src="./Components/abstract-class-in-java.jpg" alt="Abstraction">
+                            <div class="card-body">
+                              <h4 class="card-title">Abstraction</h4>
+                              <p class="card-text">
+                                Data abstraction is the process of hiding certain details and showing only essential information. Abstraction can be achieved with either abstract classes or interfaces.
+                              </p>
+                              <a href="./Abstraction.html" class="btn btn-primary">Abstraction >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img-top" src="./Components/interface-in-java.jpg" alt="Interface">
+                            <div class="card-body">
+                              <h4 class="card-title">Interface</h4>
+                              <p class="card-text">
+                                An interface in java is a blueprint of a class. It has static constants and abstract methods. The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface.
+                              </p>
+                              <a href="./Interface.html" class="btn btn-primary">Interface >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img-top" src="./Components/interface-vs-abstract-class-java.jpg" alt="Interface">
+                            <div class="card-body">
+                              <h4 class="card-title">Interface vs Abstraction</h4>
+                              <p class="card-text">
+                                Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. But there are many differences between abstract class and interface.
+                              </p>
+                              <a href="./IVSA.html" class="btn btn-primary">Interface vs Abstraction >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const currDate = new Date();
+            const hrs = currDate.getHours();
+            let greet;
+                if (hrs < 12)
+                greet = 'Morning';
+                else if (hrs >= 12 && hrs < 17)
+                    greet = 'Afternoon';
+                else if (hrs >= 17 && hrs <= 24)
+                    greet = 'Evening';
+                
+                document.getElementById('greet').innerHTML = 'Good ' + greet + '! ';    
+        </script>
+        <script src="./Components/main.js"></script>
+
+</body>
+<footer>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="card-title"><a href="./About.html" class="btn btn-dark" style="background-color: black;"><b> Go to about </b></a></h4>
+            <p class="card-text">
+            This is our Web technology Sessional Project from WT Group-8. Here we have discussed about the abstract classes and concept of interfaces in Java.
+            </p>
+        </div>
+    </div>
+</footer>
+    
+</div>
+</html>

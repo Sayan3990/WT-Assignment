@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Components/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>About</title>
+</head>
+<body>
+  <div>
+    <div class="progressbar"></div>
+    <div>
+      <css-doodle grid="5" class="doodle">
+          :doodle {
+              @grid: 10 / 100vmax;
+          }
+          background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+          opacity: @r(.9);
+          clip-path: polygon(
+              @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+          );
+          
+          animation: test infinite @r(40s, 70s) linear;
+          
+          @keyframes test {
+              0% {
+              transform: translate3d(0, 0, 0);
+              }
+              50% {
+              transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+              }
+              100% {
+              transform: translate3d(0, 0, 0);
+              }
+          }
+      </css-doodle>
+      <div>
+          <nav class="navbar navbar-expand-lg ">
+              <ul class="nav" style="font-weight: bold;">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html" target="_top">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="IVSA.html" target="_top">Difference</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="About.html" target="_top">About</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>      
+    </div>
+    <br>
+    <div class="container p-4 my-4">
+    <h1 class="text-center" style="color: black;">Web Technology Group-8</h1>
+      <table class="table table-hover" style="background-color: aliceblue;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1905148</th>
+            <td>Aanchal Gupta</td>
+          </tr>
+          <tr>
+            <th scope="row">1905173</th>
+            <td>Gargi Chakraverty</td>
+          </tr>
+          <tr>
+            <th scope="row">1905324</th>
+            <td>Kankana Dolai</td>
+          </tr><tr>
+            <th scope="row">1905345</th>
+            <td>Sayan Bhattacharyya</td>
+          </tr><tr>
+            <th scope="row">1905356</th>
+            <td>Snehasish Sameer Sourav</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     
+  </div>
+  <style>
+    td, th {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+        <script src="./Components/main.js"></script>
+</body>
+</div>
+</html>

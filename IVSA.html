@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Components/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Difference</title>
+</head>
+<body>
+    <div>
+        <div id="progressbar" border ></div>
+        <css-doodle grid="5" class="doodle">
+            :doodle {
+                @grid: 10 / 100vmax;
+            }
+            background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+            opacity: @r(.9);
+            clip-path: polygon(
+                @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+            );
+            
+            animation: test infinite @r(40s, 70s) linear;
+            
+            @keyframes test {
+                0% {
+                transform: translate3d(0, 0, 0);
+                }
+                50% {
+                transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+                }
+                100% {
+                transform: translate3d(0, 0, 0);
+                }
+            }
+        </css-doodle>
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <ul class="nav" style="font-weight: bold;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="IVSA.html" target="_top">Difference</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html" target="_top">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container" style="top: 200px;">
+        <div class="d-flex flex-column">
+            <h1 id="MyHead">Interface Vs Abstraction</h1>
+            <div class="p-2">
+                <h3 id="text1">Introduction:</h3>
+                <p id="text">
+                    Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. Abstract class and interface both can't be instantiated.But there are many differences between abstract class and interface that are given below. An abstract class permits you to make functionality that subclasses can implement or override whereas an interface only permits you to state functionality but not to implement it. A class can extend only one abstract class while a class can implement multiple interfaces.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Difference between abstract class and interface:</h3>
+                <table class="table table-hover" style="background-color: aliceblue; font-weight: 500;">
+                    <thead class="thead-dark">
+                      <tr align="center">
+                        <th>Abstract classes</th>
+                        <th>Interfaces</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1) Abstract class can have abstract and non-abstract methods.</td>
+                        <td>1) An interface can have only abstract methods. Since Java 8, it can have default and static methods also.</td>
+                      </tr>
+                      <tr>
+                        <td>2) Abstract class doesn't support multiple inheritance.</td>
+                        <td>2) Interface supports multiple inheritance.</td>
+                      </tr>
+                      <tr>
+                        <td>3) Abstract class can have final, non-final, static and non-static variables.</td>
+                        <td>3) Interface has only static and final variables.</td>
+                      </tr>
+                      <tr>
+                        <td>4) Abstract class can provide the implementation of an interface.</td>
+                        <td>4) Interface can't provide the implementation of an abstract class.</td>
+                      </tr>
+                      <tr>
+                        <td>5) The abstract keyword is used to declare an abstract class.</td>
+                        <td>5) The interface keyword is used to declare the interface.</td>
+                      </tr>
+                      <tr>
+                        <td>6) An abstract class can extend another Java class and implement multiple Java interfaces.</td>
+                        <td>6) An interface can extend another Java interface only.</td>
+                      </tr>
+                      <tr>
+                        <td>7) An abstract class can be extended using the keyword “extends”.</td>
+                        <td>7) An interface class can be implemented using the keyword “implements”.</td>
+                      </tr>
+                      <tr>
+                        <td>8) A Java abstract class can have class members like private, protected, etc.</td>
+                        <td>8) Members of a Java interface are public by default.</td>
+                      </tr>
+                      <tr>
+                        <td>9) An abstract class has protected and public abstract methods.</td>
+                        <td>9) An interface can have only public abstract methods.</td>
+                      </tr>
+                      <tr>
+                        <td>10) It should be used when various implementations of the same kind share a common behavior.</td>
+                        <td>10) It is better to use interface when various implementations share only method signature. Polymorphic hierarchy of value types.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Example of abstract class and interface in Java:</h3>
+                <p id="text">Let's see a simple example where we are using interface and abstract class both.</p>
+                <img id="bigimg" src="./Code/InterfaceVsAbstraction.png" alt="Code">
+            </div>
+        </div>
+    </div>
+    <script src="./Components/main.js"></script>
+</body>
+<footer>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="card-title"><a href="./About.html" class="btn btn-dark " style="background-color: black;"><b> Go to about </b></a></h4>
+            <p class="card-text">
+            This is our Web technology Sessional Project from WT Group-8. Here we have discussed about the abstract classes and concept of interfaces in Java.
+            </p>
+        </div>
+    </div>
+</footer>
+    
+</div>
+</html>

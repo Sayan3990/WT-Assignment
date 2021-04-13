@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Components/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Interface</title>
+</head>
+<body>
+    <div>
+        <div id="progressbar" border ></div>
+        <div>
+        <css-doodle grid="5" class="doodle">
+            :doodle {
+                @grid: 10 / 100vmax;
+            }
+            background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+            opacity: @r(.9);
+            clip-path: polygon(
+                @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+            );
+            
+            animation: test infinite @r(40s, 70s) linear;
+            
+            @keyframes test {
+                0% {
+                transform: translate3d(0, 0, 0);
+                }
+                50% {
+                transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+                }
+                100% {
+                transform: translate3d(0, 0, 0);
+                }
+            }
+        </css-doodle>
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <ul class="nav" style="font-weight: bold;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="IVSA.html" target="_top">Difference</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html" target="_top">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>      
+        </div>
+    </div>
+    <div class="container" style="top: 200px;">
+        <div class="d-flex flex-column">
+            <h1 id="MyHead">Interface</h1>
+            <div class="p-2">
+                <h3 id="text1">Introduction:</h3>
+                <p id="text">
+                    An interface in java is a blueprint of a class. It has static constants and abstract methods. The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not the method body. It is used to achieve abstraction and multiple inheritance in Java. In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Why to use Java interface:</h3>
+                <ul>
+                    <li><p id="text">It is used to achieve abstraction.</p></li>
+                    <li><p id="text">By interface, we can support the functionality of multiple inheritance.</p></li>
+                    <li><p id="text">It can be used to achieve loose coupling.</p></li>
+                </ul>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">How to declare an interface:</h3>
+                <p id="text">
+                    An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static, and final by default. A class that implements an interface must implement all the methods declared in the interface.
+                </p>
+                <img id="syntax" src="./Code/Interface/code1.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Internal addition by the compiler:</h3>
+                <p id="text">
+                    The Java compiler adds public and abstract keywords before the interface method. Moreover, it adds public, static, and final keywords before data members.
+                </p>
+                <img id="syntax" src="./Components/java-interface-compilation-process.jpg" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">The relationship between classes and interfaces:</h3>
+                <p id="text">
+                    As shown in the figure given below, a class extends another class, an interface extends another interface, but a class implements an interface.
+                </p>
+                <img id="syntax" src="./Components/interface-interview-questions_img2.jpg" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Java Interface Examples:</h3>
+                <img src="./Code/Interface/wt_5.png" alt="Code">
+                <img src="./Code/Interface/wt_6.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Multiple inheritance in Java by interface:</h3>
+                <p id="text">
+                    If a class implements multiple interfaces, or an interface extends multiple interfaces, it is known as multiple inheritance.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Example:</h3>
+                <img src="./Code/Interface/wt_7.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Multiple inheritance is not supported through class in java, but it is possible by an interface:</h3>
+                <p id="text">
+                    Multiple inheritance is not supported in the case of class because of ambiguity. However, it is supported in the case of an interface because there is no ambiguity. It is because its implementation is provided by the implementation class.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Interface Inheritance:</h3>
+                <img src="./Code/Interface/wt_8.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Default method in interface:</h3>
+                <img src="./Code/Interface/wt_9.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Static method in interface:</h3>
+                <img src="./Code/Interface/wt_10.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Marker/tagged interface:</h3>
+                <p id="text">
+                    An interface that has no member is known as a marker or tagged interface, for example, Serializable, Cloneable, Remote, etc. They are used to provide some essential information to the JVM so that JVM may perform some useful operations.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Nested interface in java:</h3>
+                <img src="./Code/Interface/wt_11.png" alt="Code">
+            </div>
+            </div>
+            <div class="p-2">
+                <h3 id="text1"></h3>
+                <p id="text">
+                    
+                </p>
+            </div>
+    </div>
+    <script src="./Components/main.js"></script>
+
+</body>
+<footer>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="card-title"><a href="./About.html" class="btn btn-dark " style="background-color: black;"><b> Go to about </b></a></h4>
+            <p class="card-text">
+            This is our Web technology Sessional Project. Here we have discussed about the abstract classes and concept of interfaces in Java.
+            </p>
+            
+        </div>
+    </div>
+</footer>
+    
+</div>
+</html>

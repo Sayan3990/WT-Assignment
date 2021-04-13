@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://img.icons8.com/nolan/64/java-coffee-cup-logo.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Components/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Abstraction
+    </title>
+</head>
+<body>
+    <div>
+        <div id="progressbar" border ></div>
+            <div>
+                <css-doodle grid="5" class="doodle">
+                    :doodle {
+                        @grid: 10 / 100vmax;
+                    }
+                    background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+                    opacity: @r(.9);
+                    clip-path: polygon(
+                        @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+                    );
+                    
+                    animation: test infinite @r(40s, 70s) linear;
+                    
+                    @keyframes test {
+                        0% {
+                        transform: translate3d(0, 0, 0);
+                        }
+                        50% {
+                        transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+                        }
+                        100% {
+                        transform: translate3d(0, 0, 0);
+                        }
+                    }
+                </css-doodle>
+            <div>
+                <nav class="navbar navbar-expand-lg ">
+                    <ul class="nav" style="font-weight: bold;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" target="_top">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Abstraction.html" target="_top">Abstraction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Interface.html" target="_top">Interface</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="IVSA.html" target="_top">Difference</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html" target="_top">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>      
+        </div>
+    </div>
+    <div class="container" style="top: 200px;">
+        <div class="d-flex flex-column">
+            <h1 id="MyHead">Abstraction</h1>
+            <div class="p-2">
+                <h3 id="text1">Introduction:</h3>
+                <p id="text">
+                    A class that is declared with the abstract keyword is known as an abstract class in Java. It can have abstract and non-abstract methods (method with the body). It needs to be extended and its method implemented. It cannot be instantiated. Abstraction is a process of hiding the implementation details and showing only functionality to the user. Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery. Abstraction lets you focus on what the object does instead of how it does it.
+                </p>
+                <img src="Components/abstract-class-img.jpg" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Ways to achieve Abstraction:</h3>
+                <ul>
+                    <li><p id="text">There are two ways to achieve abstraction in java</p></li>
+                    <li><p id="text">Abstract class (0 to 100%)</p></li>
+                    <li><p id="text">Interface (100%)</p></li>
+                </ul>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Points to Remember:</h3>
+                <ul>
+                    <li><p id="text">An abstract class must be declared with an abstract keyword.</p></li>
+                    <li><p id="text">It can have abstract and non-abstract methods.</p></li>
+                    <li><p id="text">It cannot be instantiated.</p></li>
+                    <li><p id="text">It can have constructors and static methods also.</p></li>
+                    <li><p id="text">It can have final methods which will force the subclass not to change the body of the method</p></li>
+                </ul>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Example of abstract class:</h3>
+                <img id="syntax" src="Code/Abstraction/code1.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Abstract Method in Java:</h3>
+                <p id="text">
+                    A method that is declared as abstract and does not have implementation is known as an abstract method.
+                </p>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Example of Abstract class that has an abstract method:</h3>
+                <img src="./Code/Abstraction/wt_3.png" alt="Code">
+                <img src="./Code/Abstraction/wt_2.png" alt="Code">
+                <img src="./Code/Abstraction/wt_1.png" alt="Code">
+            </div>
+            <div class="p-2">
+                <h3 id="text1">Rule:</h3>
+                <ul>
+                    <li><p id="text">If there is an abstract method in a class, that class must be abstract.</p></li>
+                    <li><p id="text">If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make this class abstract.</p></li>
+                </ul>
+            </div>
+            <div class="p-2">
+                <h3 id="text1">An abstract class having constructor, data member, and methods:</h3>
+                <img src="./Code/Abstraction/wt_4.png" alt="Code">
+            </div>
+        </div>
+    </div>
+    <script src="./Components/main.js"></script>
+</body>
+<footer>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="card-title"><a href="./About.html" class="btn btn-dark " style="background-color: black;"><b> Go to about </b></a></h4>
+            <p class="card-text">
+            This is our Web technology Sessional Project. Here we have discussed about the abstract classes and concept of interfaces in Java.
+            </p>
+            
+        </div>
+    </div>
+</footer>
+    
+</div>
+</html>
