@@ -168,6 +168,7 @@ footer .card:hover {
 }
 
 .p-2 img {
+    padding: 10px 0px;
     height: auto;
     width: 100%;
 }
